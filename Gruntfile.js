@@ -1,4 +1,7 @@
 module.exports = function(grunt) {
+  // Hack for domains with '.' in them
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
   grunt.initConfig({
     s3: grunt.file.readJSON('s3.json'),
 
