@@ -1,0 +1,25 @@
+{
+  "name": "shz-website",
+  "version": "1.0.0",
+  "description": "A reasonable excellent website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shz/website.git"
+  },
+  "author": "Patrick Stein",
+  "license": "Creative Commons BY-NC-SA",
+  "devDependencies": {
+    "harp": "~0.8.13",
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-parallel": "~0.2.0",
+    "grunt-awssum-deploy": "~0.1.2",
+    "grunt-exec": "~0.4.2",
+    "mime": "~1.2.10"
+  }
+}
