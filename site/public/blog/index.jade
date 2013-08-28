@@ -1,0 +1,8 @@
+h1 Hi
+
+each article, slug in globals.public.blog.data
+  // Skip the example article, since it's not meant for public consumption
+  - if (slug == 'example') continue;
+
+  a(href="/blog/" + slug)
+    h2= article.title

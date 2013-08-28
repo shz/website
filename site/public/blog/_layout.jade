@@ -1,0 +1,54 @@
+!!! 5
+html
+  head
+    title= title + ' | Patrick Stein'
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
+    meta(name='description', content='Patrick Stein is an entrepreneur specializing software development and user experience, hailing from Toronto Canada and living in sunny Portland Oregon.  He blogs, he brags, he bumbles, and he builds.  This is his personal site.')
+    meta(name='og:title', content='Patrick Stein')
+    meta(name='og:type', content='website')
+    meta(name='og:image', content='/static/img/og.png')
+    link(rel='stylesheet', href='/static/css/entry.css')
+    link(rel='stylesheet', href='/static/lib/prettify/prettify.css')
+  body
+    header
+
+    article
+      h1= title
+      time
+        small= date
+
+      != yield
+
+    #disqus_thread
+
+
+    //
+    // Ah, google analytics.
+    //
+    script
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-43099321-1', 'patrickstein.com');
+      ga('send', 'pageview');
+
+    //
+    // Prettify
+    //
+    script(src='/static/lib/prettify/prettify.js')
+    script
+      prettyPrint();
+
+    //
+    // And disqus.  Ugh, so much JS
+    //
+    script
+      var disqus_shortname = 'pstein';
+      var disqus_title = '#{title}';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();

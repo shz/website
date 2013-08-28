@@ -1,8 +1,53 @@
 @import _common;
 
 /******************************
+/* Hero Business
+/******************************/
+
+#hero
+  font-size 0
+  display table
+  width 100%
+  height 100%
+  /* 1564B2 389CFF 51A9FF */
+  /* 1E5799 7DB9E8 */
+  background-image radial-gradient(ellipse at top left, #1564B2 0%, #51A9FF 100%)
+
+  > div
+    display table-cell
+    text-align center
+    vertical-align middle
+  h1, h2, h3
+    margin 0
+    line-height 1
+  h2, h3
+    text-shadow 2px 2px 2px rgba(0, 0, 0, 0.4)
+  h1
+    font-size 42pt
+    color #FFF
+  h2
+    font-size 30px
+    margin-bottom 4px
+  h3
+    font-size 18px
+  .scroll
+    font-size 140pt
+    font-family "Novecento"
+    font-weight bold
+    text-shadow 2px 2px 2px rgba(0, 0, 0, 0.6)
+
+@media screen and (max-width: 500px) {
+  #hero h1 { font-size: 34px; }
+  #hero h2 { font-size: 23px; }
+  #hero h3 { font-size: 14px; }
+}
+
+/******************************
 /* Main content
 /******************************/
+
+h1, h2, h3, h4, h5, h6
+  text-shadow 2px 2px 2px rgba(0, 0, 0, 0.6)
 
 #main
   height auto
@@ -38,4 +83,3 @@ section
   > div
     display table-cell
     vertical-align middle
-
