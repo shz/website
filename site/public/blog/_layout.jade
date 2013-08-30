@@ -12,6 +12,10 @@ html
     link(rel='stylesheet', href='/static/lib/prettify/prettify.css')
   body
     header
+      span Patrick Stein
+      a(href="/") Home
+      a.current(href="/blog/") Blog
+      a(href="/projects") Projects
 
     article
       h1= title
@@ -38,13 +42,13 @@ html
     // Prettify
     //
     script(src='/static/lib/prettify/prettify.js')
-    script
+    script.
       prettyPrint();
 
     //
     // And disqus.  Ugh, so much JS
     //
-    script
+    script.
       var disqus_shortname = 'pstein';
       var disqus_title = '#{title}';
       (function() {

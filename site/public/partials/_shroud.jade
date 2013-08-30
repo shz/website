@@ -1,0 +1,13 @@
+#shroud
+  script.
+    setTimeout(function() {
+      document.getElementById('shroud').className += ' fade';
+      setTimeout(function() {
+        document.getElementById('shroud').className += ' hidden';
+      }, 400);
+    }, 200);
+noscript
+  style.
+    #shroud { display: none; }
+script(src='/static/lib/vztouch.js')
+script(src='/static/js/main.js')

@@ -29,7 +29,7 @@ html
     //
     // Content area
     //
-    section#main
+    main
       div
         img(src='/static/img/headshot.png', alt='My Ugly Mug', title='High contrast monochrome.  Subtle,  elegant,  bold.  A refined look for the modern internet denizen.  Pair with rounded corners and flat UI.  I just threw up a little.')
         p
@@ -50,7 +50,7 @@ html
           | , but it
           | happens infrequently.  I'm doing and have done some cool stuff in my time, all neatly collated, sorted,
           | and embossed at a little place I like to call
-          a(href='#') Projects
+          a(href='/projects') Projects
           | .  I need one final link
           | but I'm out of ideas for text, so we're just going to drop it smack dab in the middle like this:
           a(href='https://github.com/shz') Github
@@ -59,7 +59,7 @@ html
     //
     // Ah, google analytics.
     //
-    script
+    script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -67,3 +67,5 @@ html
 
       ga('create', 'UA-43099321-1', 'patrickstein.com');
       ga('send', 'pageview');
+
+    != partial('partials/_shroud.jade')

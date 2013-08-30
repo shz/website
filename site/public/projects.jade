@@ -1,0 +1,27 @@
+!!! 5
+html
+  head
+    title Patrick Stein
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
+    meta(name='description', content='Patrick Stein is an entrepreneurial fellow with a passion for software development and user experience, hailing from Toronto Canada and living in sunny Portland Oregon.  He blogs, he brags, he bumbles, and he builds.  This is his personal site.')
+    meta(name='og:title', content='Patrick Stein')
+    meta(name='og:type', content='website')
+    meta(name='og:image', content='/static/img/og.png')
+    meta(name='og:url', content='http://patrickstein.com/projects')
+    link(rel='canonical', href='http://patrickstein.com/projects')
+    link(rel='stylesheet', href='/static/css/projects.css')
+  body
+    header
+      span Patrick Stein
+      a(href='/') Home
+      a(href='/blog/') Blog
+      a.current(href='/projects') Projects
+
+    main
+      section
+        h1 Projects
+        p
+          | A small collection of some of the cooler things I've worked on.
+
+    != partial('partials/_shroud.jade')
